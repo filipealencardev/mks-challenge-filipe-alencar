@@ -5,6 +5,7 @@ import { CustomLoading } from "@/components/CustomLoading";
 import CustomSkeleton from "@/components/CustomSkeleton";
 import GridResponsive from "@/components/GridResponsive";
 import { GlobalContext } from "@/contexts/GlobalContext";
+import { Footer } from "@/layouts/Footer";
 import ProductApi from "@/services/apis/Products";
 import { Product } from "@/types/Productstype";
 import { countProducts } from "@/utils/helpers";
@@ -19,6 +20,7 @@ export const ContainerHome = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
+  min-height: 100vh;
 `;
 
 const Home: React.FC = ({}) => {

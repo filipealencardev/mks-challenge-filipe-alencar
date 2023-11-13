@@ -8,6 +8,7 @@ import "@/styles/fonts.css";
 import { GlobalContextProvider } from "@/contexts/GlobalContext";
 import { Header } from "@/layouts/Header";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Footer } from "@/layouts/Footer";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -42,6 +43,7 @@ const App: React.FC<AppProps> = ({
         <GlobalStyle />
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     );
   };
