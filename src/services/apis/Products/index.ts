@@ -1,6 +1,6 @@
 import { IHttpResponse } from "@/services/data/IHttpClient";
 import { httpClient } from "@/services/data/main";
-import { ApiResponse } from "@/types/Productstype";
+import { Product, ApiResponse } from "@/types/Productstype";
 
 export default class ProductApi {
   baseUrl = "";
@@ -24,10 +24,10 @@ export default class ProductApi {
     rows?: number,
     sortBy?: "id" | "name" | "price",
     orderBy?: "DESC" | "ASC"
-  ): IHttpResponse<ApiResponse[], unknown> => {
-    const { data, error } = httpClient.useGet<ApiResponse[]>(
+  ): IHttpResponse<ApiResponse, unknown> => {
+    const { data, error } = httpClient.useGet<ApiResponse>(
       this.endPointListProduct(page, rows, sortBy, orderBy)
-    ) as IHttpResponse<ApiResponse[], unknown>;
+    ) as IHttpResponse<ApiResponse, unknown>;
 
     return {
       data,

@@ -3,7 +3,10 @@ export type Product = {
   name: string;
   brand: string;
   description: string;
-  price: number;
+  photo: string;
+  price: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type ApiResponse = {

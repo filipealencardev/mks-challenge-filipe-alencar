@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const MainHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+export const ContainerHeader = styled.div`
   width: 100%;
   padding: 28px 65px;
   background-color: #0f52ba;

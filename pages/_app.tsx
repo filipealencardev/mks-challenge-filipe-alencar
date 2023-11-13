@@ -7,6 +7,7 @@ import { NextPage } from "next";
 import "@/styles/fonts.css";
 import { GlobalContextProvider } from "@/contexts/GlobalContext";
 import { Header } from "@/layouts/Header";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -15,6 +16,8 @@ export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+const queryClient = new QueryClient();
 
 const App: React.FC<AppProps> = ({
   Component,
@@ -30,26 +33,26 @@ const App: React.FC<AppProps> = ({
       Component.getLayout(
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Header>
-            <Component {...pageProps} />
-          </Header>
+          <Header />
+          <Component {...pageProps} />
         </ThemeProvider>
       )
     ) : (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header>
-          <Component {...pageProps} />
-        </Header>
+        <Header />
+        <Component {...pageProps} />
       </ThemeProvider>
     );
   };
 
   return (
     mounted && (
-      <GlobalContextProvider>
-        <ThemeWrapper />
-      </GlobalContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <GlobalContextProvider>
+          <ThemeWrapper />
+        </GlobalContextProvider>
+      </QueryClientProvider>
     )
   );
 };
