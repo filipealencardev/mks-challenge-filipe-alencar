@@ -20,6 +20,7 @@ export const Cards: React.FC<ICard> = ({
   isLoading,
   position,
   quantityItens,
+  insertChekoutItem,
 }) => {
   const currencyFormat = (value: number) => {
     const currencyPTBR = new Intl.NumberFormat("pt-BR", {
@@ -45,7 +46,7 @@ export const Cards: React.FC<ICard> = ({
           <DescriptionCard>{options.description}</DescriptionCard>
         </ContentDescription>
       </ContentCard>
-      <ContentButton>
+      <ContentButton onClick={insertChekoutItem}>
         <PurchaseIcon />
         <TextButton>Comprar</TextButton>
       </ContentButton>

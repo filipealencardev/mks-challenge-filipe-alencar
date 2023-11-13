@@ -85,7 +85,7 @@ export const DescriptionCard = styled.span`
 
 export const TextButton = styled.div`
   color: #fff;
-
+  user-select: none;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;

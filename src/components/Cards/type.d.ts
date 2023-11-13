@@ -5,6 +5,7 @@ interface ICard {
   isLoading: boolean;
   position: number;
   quantityItens: number;
+  insertChekoutItem: () => void;
 }
 
 interface ImageCardStyle {
