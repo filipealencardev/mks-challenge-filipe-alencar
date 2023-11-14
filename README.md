@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MKS Challenge - Luis Filipe J Alencar
 
-## Getting Started
+![Superhero Showcase](project-screenshot.png)
 
-First, run the development server:
+**Superhero Showcase** Bem-vindo ao projeto MKS Challenge, um ecommerce desenvolvido em React com Next.js e TypeScript. Este projeto foi criado para proporcionar uma experiência totalmente agradável e suave aos usuários, destacando-se pela sua responsividade e pela utilização de tecnologias modernas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Desenvolvedor
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O MKS Challenge foi 100% desenvolvido por Luis Filipe Joaquim de Alencar, um experiente desenvolvedor front-end com 3 anos de atuação na área. Luis Filipe já trabalhou em projetos robustos e profissionais, incluindo o desenvolvimento de um ecommerce para uma conceituada empresa no ramo de home center.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **React e Next.js:** Frameworks JavaScript amplamente utilizados para construção de interfaces web modernas.
+- **TypeScript:** Adiciona tipagem estática ao JavaScript, trazendo benefícios de legibilidade e manutenibilidade ao código.
+- **React Query:** Facilita o gerenciamento de estados complexos e o consumo de dados na aplicação.
+- **React Loading Skeleton:** Adiciona esqueletos de carregamento para melhorar a experiência do usuário durante o carregamento de dados.
 
-## Learn More
+## Funcionalidades Principais
 
-To learn more about Next.js, take a look at the following resources:
+- **Navegação suave entre páginas.**
+- **Experiência totalmente responsiva em diferentes dispositivos.**
+- **Utilização de React Query para otimizar o gerenciamento de estados e a busca de dados.**
+- **Estilização consistente e moderna com Styled Components.**
+- **Carregamento suave com React Loading Skeleton.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Como Executar o Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To get started with the project, follow these steps:
 
-## Deploy on Vercel
+1. **Clone o repositório::**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ````bash
+   https://github.com/filipealencardev/mks-challenge-filipe-alencar ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ````
+
+2. **Entre no repositório do projeto**
+
+   ````bash
+   cd mks-challenge-filipe-alencar ```
+
+   ````
+
+3. **Instale as dependências:**
+
+   ````bash
+   yarn install ```
+
+   ````
+
+4. **Inicie a aplicação:**
+
+   ````bash
+   yarn dev ```
+   ````
+
+Agora você pode acessar o projeto em http://localhost:3000.
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você encontrar problemas, bugs ou melhorias potenciais, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+Obrigado por explorar o MKS Challenge! Esperamos que tenha uma experiência agradável.
