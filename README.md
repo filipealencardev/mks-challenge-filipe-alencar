@@ -1,7 +1,5 @@
 # MKS Challenge - Luis Filipe J Alencar
 
-![Superhero Showcase](project-screenshot.png)
-
 **Superhero Showcase** Bem-vindo ao projeto MKS Challenge, um ecommerce desenvolvido em React com Next.js e TypeScript. Este projeto foi criado para proporcionar uma experiência totalmente agradável e suave aos usuários, destacando-se pela sua responsividade e pela utilização de tecnologias modernas.
 
 ## Desenvolvedor
