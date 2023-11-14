@@ -14,6 +14,11 @@ export const ContainerHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${({ theme }) => theme.media.max.tabletL`
+padding: 28px;
+  
+  `}
 `;
 
 export const ContainerCart = styled.div<{ $disabled: boolean }>`

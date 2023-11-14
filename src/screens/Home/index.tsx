@@ -30,6 +30,7 @@ const Home: React.FC = ({}) => {
     insertProductsCheckout,
     setOpeChekout,
     setInsertProductCheckout,
+    sizeScreen,
   } = useContext(GlobalContext);
   const [loadMore, setLoadMore] = useState(false);
   const [pageAndCount, setPageAndCount] = useState({ page: 1, count: 8 });
@@ -41,6 +42,7 @@ const Home: React.FC = ({}) => {
   const [productItem, setProductItem] = useState<Product[] | undefined>(
     data?.products
   );
+  const [isMobile, setIsMobile] = useState(sizeScreen.width < 1080);
   const [loadingItens, setLoadingItens] = useState(true);
 
   useEffect(() => {
@@ -95,7 +97,7 @@ const Home: React.FC = ({}) => {
           padding={"8vw 0 2vw"}
           columns={{
             count: 4,
-            height: [1, 1, 1, 1],
+            height: isMobile ? [1] : [1, 1, 1, 1],
           }}
           rows={{
             count: 2,

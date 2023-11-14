@@ -14,6 +14,11 @@ export const MainFlyout = styled.div<MainFlyoutStyle>`
   transition: transform 0.5s ease;
   transform: ${({ $isOpen }) =>
     $isOpen ? "translateX(0%)" : "translateX(106%)"};
+
+  ${({ theme }) => theme.media.max.tabletL`
+    width: 330px;
+  
+  `}
 `;
 
 export const ContainerFlyout = styled.div`
@@ -22,6 +27,11 @@ export const ContainerFlyout = styled.div`
   align-items: center;
   padding: 38px 47px;
   justify-content: space-between;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    padding: 38px;
+  
+  `}
 `;
 
 export const ContentFlyout = styled.div`
@@ -79,6 +89,11 @@ export const NotItens = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+  ${({ theme }) => theme.media.max.tabletL`
+   text-align: center;
+  
+  `}
 `;
 export const ContentItens = styled.div`
   display: flex;
@@ -89,6 +104,11 @@ export const ContentItens = styled.div`
   box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.05);
   padding: 14px 23px;
   position: relative;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    flex-direction: column;
+    gap: 8px;
+  `}
 `;
 
 export const ButtonRemoveItem = styled.div`
@@ -99,6 +119,21 @@ export const ButtonRemoveItem = styled.div`
   svg {
     width: 22px;
   }
+
+  ${({ theme }) => theme.media.max.tabletL`
+  top: -5%;
+  left: 81%;
+    svg {
+        width: 60px;
+        height: 60px;
+    circle{
+        display: none;
+    }
+    path{
+        fill: #000;
+    }
+  }
+  `}
 `;
 
 export const ContentProduct = styled.div`
@@ -107,6 +142,12 @@ export const ContentProduct = styled.div`
   justify-content: center;
   gap: 20px;
   width: 130px;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    flex-direction: column;
+    gap: 10px;
+  
+  `}
 `;
 
 export const ImageCardFlayout = styled.img`
@@ -114,6 +155,11 @@ export const ImageCardFlayout = styled.img`
   object-fit: cover;
   max-width: 46px;
   min-height: 57px;
+
+  ${({ theme }) => theme.media.max.tabletL`
+  max-width:max-content;
+  
+  `}
 `;
 
 export const TitleCardFlyout = styled.span`
@@ -130,6 +176,11 @@ export const TitleCardFlyout = styled.span`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   width: 113px;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    white-space: nowrap;
+    width: max-content;
+  `}
 `;
 
 export const ContainerCount = styled.div`
@@ -145,6 +196,23 @@ export const TextCount = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    display: none
+  `}
+`;
+
+export const ContentPrice = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+  width: 50%;
+
+  ${({ theme }) => theme.media.max.tabletL`
+  width: 100%;
+  
+  `}
 `;
 export const ContentCount = styled.div`
   border-radius: 4px;
@@ -154,6 +222,10 @@ export const ContentCount = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${({ theme }) => theme.media.max.tabletL`
+  height: 35px;
+  
+  `}
 `;
 
 export const TextPrice = styled.span`
@@ -163,12 +235,33 @@ export const TextPrice = styled.span`
   font-style: normal;
   font-weight: 700;
   line-height: 17px;
+
+  ${({ theme }) => theme.media.max.tabletL`
+  border-radius: 5px;
+  background: #373737;
+  padding: 5px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  `}
 `;
 
 export const CountSeparator = styled.div`
   color: #bfbfbf;
   font-size: 12px;
   user-select: none;
+
+  ${({ theme }) => theme.media.max.tabletL`
+  font-size: 26px;
+    user-select: none;
+    font-weight: 400;
+    font-family: none;
+
+    max-height: 50vh;
+
+    `}
 `;
 
 export const CountAction = styled.div`
@@ -181,6 +274,11 @@ export const CountAction = styled.div`
   line-height: normal;
   cursor: pointer;
   user-select: none;
+
+  ${({ theme }) => theme.media.max.tabletL`
+    font-weight: 200;
+    font-size: 24px;
+  `}
 `;
 export const CountValue = styled.div`
   color: #000;
@@ -239,4 +337,10 @@ export const TextTotalValue = styled.span`
   font-style: normal;
   font-weight: 700;
   line-height: 15px;
+
+  ${({ theme }) => theme.media.max.tabletL`
+  font-size: 22px;
+
+
+    `}
 `;

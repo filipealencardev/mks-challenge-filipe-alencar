@@ -24,6 +24,7 @@ import {
   ContainerTotalValue,
   TextTotalValue,
   ButtonRemoveItem,
+  ContentPrice,
 } from "./styles";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
@@ -111,60 +112,62 @@ export const CustomFlyout: React.FC<IFlayout> = ({
                     <ImageCardFlayout src={item.product.photo} />
                     <TitleCardFlyout>{item.product.name}</TitleCardFlyout>
                   </ContentProduct>
-                  <ContainerCount>
-                    <TextCount>Qtd:</TextCount>
-                    <ContentCount>
-                      <CountAction
-                        onClick={() => {
-                          removeUniqueItem(item.product);
-                          setProductCheckout((prevArray) => {
-                            const updatedArray = prevArray.map((item, i) =>
-                              i === index
-                                ? {
-                                    ...item,
-                                    count:
-                                      item.count === 0
-                                        ? item.count
-                                        : item.count - 1,
-                                  }
-                                : item
-                            );
+                  <ContentPrice>
+                    <ContainerCount>
+                      <TextCount>Qtd:</TextCount>
+                      <ContentCount>
+                        <CountAction
+                          onClick={() => {
+                            removeUniqueItem(item.product);
+                            setProductCheckout((prevArray) => {
+                              const updatedArray = prevArray.map((item, i) =>
+                                i === index
+                                  ? {
+                                      ...item,
+                                      count:
+                                        item.count === 0
+                                          ? item.count
+                                          : item.count - 1,
+                                    }
+                                  : item
+                              );
 
-                            return updatedArray.filter(
-                              (item) => item.count !== 0
-                            );
-                          });
-                        }}
-                      >
-                        -
-                      </CountAction>
-                      <CountSeparator>|</CountSeparator>
-                      <CountValue>{item.count}</CountValue>
-                      <CountSeparator>|</CountSeparator>
-                      <CountAction
-                        onClick={() =>
-                          setProductCheckout((prevArray) =>
-                            prevArray.map((item, i) =>
-                              i === index
-                                ? { ...item, count: item.count + 1 }
-                                : item
+                              return updatedArray.filter(
+                                (item) => item.count !== 0
+                              );
+                            });
+                          }}
+                        >
+                          -
+                        </CountAction>
+                        <CountSeparator>|</CountSeparator>
+                        <CountValue>{item.count}</CountValue>
+                        <CountSeparator>|</CountSeparator>
+                        <CountAction
+                          onClick={() =>
+                            setProductCheckout((prevArray) =>
+                              prevArray.map((item, i) =>
+                                i === index
+                                  ? { ...item, count: item.count + 1 }
+                                  : item
+                              )
                             )
-                          )
-                        }
-                      >
-                        +
-                      </CountAction>
-                    </ContentCount>
-                  </ContainerCount>
-                  <TextPrice>
-                    {currencyFormat(
-                      Number(
-                        item.product.price
-                          ? Number(item.product.price) * item.count
-                          : 0
-                      )
-                    )}
-                  </TextPrice>
+                          }
+                        >
+                          +
+                        </CountAction>
+                      </ContentCount>
+                    </ContainerCount>
+                    <TextPrice>
+                      {currencyFormat(
+                        Number(
+                          item.product.price
+                            ? Number(item.product.price) * item.count
+                            : 0
+                        )
+                      )}
+                    </TextPrice>
+                  </ContentPrice>
                   <ButtonRemoveItem
                     onClick={() => removeAllItens(item.product.id)}
                   >
