@@ -2,6 +2,10 @@
 
 Bem-vindo ao projeto MKS Challenge, um ecommerce desenvolvido em React com Next.js e TypeScript. Este projeto foi criado para proporcionar uma experiência totalmente agradável e suave aos usuários, destacando-se pela sua responsividade e pela utilização de tecnologias modernas.
 
+## Ver Ao-Vivo
+
+O Projeto pode ser acessao ao-vivo no seguinte endereço: https://mks-challenge-filipe-alencar.netlify.app/
+
 ## Desenvolvedor
 
 O MKS Challenge foi 100% desenvolvido por Luis Filipe Joaquim de Alencar, um experiente desenvolvedor front-end com 3 anos de atuação na área. Luis Filipe já trabalhou em projetos robustos e profissionais, incluindo o desenvolvimento de um ecommerce para uma conceituada empresa no ramo de home center.
